@@ -171,13 +171,14 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
     <a href="#citewise"><span class="no">02</span>主项目 · CiteWise</a>
     <a href="#scheduler"><span class="no">03</span>智能排班助手</a>
     <a href="#flagforge"><span class="no">04</span>FlagForge</a>
-    <a href="#echowalk"><span class="no">05</span>EchoWalk</a>
-    <a href="#fulian"><span class="no">06</span>福链智图</a>
-    <a href="#rca"><span class="no">07</span>字节 · AI 工作流</a>
-    <a href="#vibe"><span class="no">08</span>AI 工程实践</a>
-    <a href="#intern"><span class="no">09</span>实习经历</a>
-    <a href="#origin"><span class="no">10</span>学科背景</a>
-    <a href="#about"><span class="no">11</span>关于我</a>
+    <a href="#xinqing"><span class="no">05</span>心晴 · 情绪日记</a>
+    <a href="#echowalk"><span class="no">06</span>EchoWalk</a>
+    <a href="#fulian"><span class="no">07</span>福链智图</a>
+    <a href="#rca"><span class="no">08</span>字节 · AI 工作流</a>
+    <a href="#vibe"><span class="no">09</span>AI 工程实践</a>
+    <a href="#intern"><span class="no">10</span>实习经历</a>
+    <a href="#origin"><span class="no">11</span>学科背景</a>
+    <a href="#about"><span class="no">12</span>关于我</a>
   </div>
   <div class="navfoot">南京大学 · 2027届硕士</div>
 </nav>
@@ -281,7 +282,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
     <div class="pos">自然语言理解 × 约束求解 × 独立规则校验</div>
     <div class="one">面向连锁门店周排班：店长提出需求，系统生成候选方案、检查 9 条硬规则，并支持手工微调、已有排班表导入和无解诊断。模型负责理解与表达，求解器与校验器负责排班正确性。</div>
   </div>
-  <div class="project-links rv"><a href="https://github.com/kizzzz/smart-scheduler" target="_blank" rel="noopener noreferrer" class="primary">查看源码与设计取舍 ↗</a></div>
+  <div class="project-links rv"><a href="https://scheduler.typexx.work" target="_blank" rel="noopener noreferrer" class="primary">在线体验 ↗</a><a href="https://github.com/kizzzz/smart-scheduler" target="_blank" rel="noopener noreferrer">查看源码与设计取舍 ↗</a></div>
   <h3 class="rv">产品判断：可沟通的需求，必须转成可验收的规则</h3>
   <p class="rv">排班同时受到技能覆盖、班次人数、每周工时、连续工作天数与请假条件约束。自然语言可以降低输入门槛，但生成结果仍需逐条校验；因此将<b>意图回显、独立验收、人工微调后重校验</b>放进同一条使用路径。</p>
   <div class="flow rv">
@@ -298,7 +299,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
   <h3 class="rv">设计取舍：区分“证明无解”与“尚未找到解”</h3>
   <p class="rv">求解器有 <b>4 秒 / 6 万节点</b>预算。搜索耗尽预算与证明无解分别呈现，避免把系统能力限制误报为业务无解。软约束采用局部优化，不承诺全局最优；跨周连续工作天数不在当前校验范围内。</p>
   <p class="rv"><b>可迁移经验：</b>把 AI 应用拆成可独立验证的理解、求解、校验、解释四层，让模型的不确定性有明确边界，也让业务方能看懂结果与限制。</p>
-  <p class="source-note rv">技术栈：React 19 / TypeScript / Vite / FastAPI / GLM。实现与设计细节见项目源码。</p>
+  <p class="source-note rv">技术栈：React 19 / TypeScript / Vite / FastAPI / GLM。线上演示：<a href="https://scheduler.typexx.work" target="_blank" rel="noopener noreferrer">scheduler.typexx.work</a>；实现与设计细节见项目源码。</p>
 </section>
 
 <section id="flagforge">
@@ -309,7 +310,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
     <div class="pos">React / TypeScript × Go × PostgreSQL</div>
     <div class="one">面向小团队的功能开关与灰度规则平台：按开发、预发、生产环境管理 Flag，维护匹配条件与优先级，通过在线评估和逐规则 Trace 解释某个用户为什么命中规则或获得默认值。</div>
   </div>
-  <div class="project-links rv"><a href="https://github.com/kizzzz/FlagForge" target="_blank" rel="noopener noreferrer" class="primary">查看源码 ↗</a><a href="https://github.com/kizzzz/FlagForge/blob/main/docs/ai-logs/T5-acceptance.md" target="_blank" rel="noopener noreferrer">验收记录 ↗</a></div>
+  <div class="project-links rv"><a href="https://flagforge.typexx.work" target="_blank" rel="noopener noreferrer" class="primary">在线体验 ↗</a><a href="https://github.com/kizzzz/FlagForge" target="_blank" rel="noopener noreferrer">查看源码 ↗</a><a href="https://github.com/kizzzz/FlagForge/blob/main/docs/ai-logs/T5-acceptance.md" target="_blank" rel="noopener noreferrer">验收记录 ↗</a></div>
   <h3 class="rv">产品方案：配置、验证、追溯形成完整闭环</h3>
   <div class="grid g3 rv">
     <div class="ins"><span class="k">环境与规则</span>同一环境内 key 唯一，跨环境可复用；优先级数值越小越先评估，重复优先级被拒绝。</div>
@@ -320,11 +321,33 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
   <p class="rv">批量模拟支持最多 <b>100 组</b>用户属性输入，用分布结果查看规则覆盖情况。环境复制后默认停用，保留启用前的核对步骤。开关停用时直接返回 false，规则使用严格 JSON 类型比较，避免字符串、数字或布尔值隐式转换造成误命中。</p>
   <div class="pull rv"><b>一个可解释的判断：</b>当规则要求数值 <code>9001</code>，而用户属性传入字符串 <code>"9001"</code>，系统记录类型不匹配并继续评估；没有规则命中时，明确返回默认值。</div>
   <p class="rv"><b>可迁移经验：</b>产品基础设施的可信度来自明确的规则语义、可复查的评估过程与一致的变更记录；将这些约束前置到交互与数据层，减少使用者对隐含行为的猜测。</p>
-  <p class="source-note rv">仓库提供数据库迁移、核心测试、验收记录与 AI 开发过程文档。项目聚焦规则评估与管理，能力范围以 README 为准；未发现公开在线演示地址。</p>
+  <p class="source-note rv">仓库提供数据库迁移、核心测试、验收记录与 AI 开发过程文档。线上演示：<a href="https://flagforge.typexx.work" target="_blank" rel="noopener noreferrer">flagforge.typexx.work</a>（含演示数据）；项目聚焦规则评估与管理，能力范围以 README 为准。</p>
+</section>
+
+<section id="xinqing">
+  <div class="sec-no rv">05 / AI × SELF-CARE</div>
+  <div class="proj rv">
+    <div class="tag">产品设计项目 × AI × 心理健康</div>
+    <h2>心晴 — 情绪像天气，来了也会走</h2>
+    <div class="pos">产品设计 × FastAPI × GLM × PWA</div>
+    <div class="one">面向年轻人的情绪日记与自我关怀应用：30 秒完成一次情绪记录，AI 以自我关怀三段式回应，聊天中自动识别情绪并生成可入库的心情卡片，用天空与天气的隐喻让情绪被看见、被接纳。</div>
+  </div>
+  <div class="project-links rv"><a href="https://meituan.typexx.work" target="_blank" rel="noopener noreferrer" class="primary">在线体验 ↗</a><a href="https://github.com/kizzzz/moodcare" target="_blank" rel="noopener noreferrer">查看源码 ↗</a></div>
+  <h3 class="rv">产品主线：低门槛的记录，有出路的疏解</h3>
+  <p class="rv">调研发现年轻人情绪波动频繁，但长文字日记门槛高、专业咨询成本高。心晴把一次记录压缩到 <b>30 秒</b>（四象限选情绪 → 点选触发因素 → 可选一句倾诉），AI 回应采用自我关怀三段式（承认感受 × 共同人性 × 善待自己）并附微行动三选一，让记录之后有即时、低成本的疏解出口。</p>
+  <div class="grid g3 rv">
+    <div class="ins"><span class="k">聊天即记录</span>自由对话中 AI 自动提取情绪，内联生成心情卡片提案；确认后一键入库进入洞察，拒绝后有两轮冷却避免打扰。</div>
+    <div class="ins"><span class="k">天空日历</span>60 天情绪热力格与今日天空卡动态渐变，情绪强度映射天气形态；支持一键生成分享图。</div>
+    <div class="ins"><span class="k">安全网设计</span>危机词触发安全回应与求助渠道；语音识别失败自动降级为打字，图片理解只挂最后一条消息以控制成本。</div>
+  </div>
+  <h3 class="rv">设计判断：色彩是情绪的第二语言</h3>
+  <p class="rv">色彩体系遵循「背景静，情绪动」：环境层固定暖米白，情绪层用四族颜色（风起红 / 日晴黄 / 夜雨蓝 / 微风绿）按效价映射色相、唤醒度映射饱和度；22:00 后自动切换深夜暖色。所有 AI 回应由水彩猫「团子」送达，降低被评判感。</p>
+  <p class="rv"><b>可迁移经验：</b>情绪类产品的核心不是功能密度，而是记录门槛、回应质量与安全底线三者的平衡；色彩与隐喻承担了大部分「接纳感」，文字反而要保持克制。</p>
+  <p class="source-note rv">全流程 Playwright E2E 覆盖记录、聊天提案、危机词与周报生成；线上已服务真实用户。技术栈：FastAPI / SQLite / GLM-4-Flash / GLM-4V（图片理解）/ 原生 JS PWA。</p>
 </section>
 
 <section id="echowalk">
-  <div class="sec-no rv">05 / PROJECT</div>
+  <div class="sec-no rv">06 / PROJECT</div>
   <div class="proj rv">
     <div class="tag">辅助项目 · AI × 城市科学 · 2025.08 – 2025.12</div>
     <h2>EchoWalk — AI 驱动的个人城市漫游助手</h2>
@@ -369,7 +392,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
 
 
 <section id="fulian">
-  <div class="sec-no rv">06 / PROJECT</div>
+  <div class="sec-no rv">07 / PROJECT</div>
   <div class="proj rv">
     <div class="tag">辅助项目 · G 端 AI 决策 · 2025.03 – 2025.11</div>
     <h2>福链智图 — 工业大模型与招商决策一体化平台</h2>
@@ -393,7 +416,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
 
 
 <section id="rca">
-  <div class="sec-no rv">07 / INTERNSHIP HIGHLIGHT</div>
+  <div class="sec-no rv">08 / INTERNSHIP HIGHLIGHT</div>
   <div class="proj rv">
     <div class="tag">字节跳动 · AI 产品经理实习 · 2026.06 – 至今</div>
     <h2>AI-Native 归因风险感知 & RCA 工作流</h2>
@@ -430,7 +453,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
 
 
 <section id="vibe">
-  <div class="sec-no rv">08 / AI ENGINEERING</div>
+  <div class="sec-no rv">09 / AI ENGINEERING</div>
   <h2 class="sec rv">AI 工程实践：从 Prompt 到 Skill 到 Agent</h2>
   <p class="sec-sub rv">不只是"会用 AI"——把 AI 能力固化为可复用的工程资产，是我的差异化竞争力。</p>
 
@@ -456,7 +479,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
 
 
 <section id="intern">
-  <div class="sec-no rv">09 / EXPERIENCE</div>
+  <div class="sec-no rv">10 / EXPERIENCE</div>
   <h2 class="sec rv">实习经历时间线</h2>
   <p class="sec-sub rv">四段实习构成清晰的成长路径：产品运营 → 增长产品 → AI 产品 → AI Agent 治理。</p>
 
@@ -465,7 +488,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
       <div class="when">2026.06 – 至今</div>
       <div class="org">字节跳动 · AI 产品经理实习（治理与体验）</div>
       <ul>
-        <li><b>RCA 工作流</b>：人效 16x / 返工率 5% / 成功率 100%，方法论复用 2 场景（<a href="#rca">详见第 07 节</a>）</li>
+        <li><b>RCA 工作流</b>：人效 16x / 返工率 5% / 成功率 100%，方法论复用 2 场景（<a href="#rca">详见第 08 节</a>）</li>
         <li><b>IPR 治理 Agent</b>：假货处置量 +6000%，资质核验 5%→66%，自动决策率 79%+，周省 $5189</li>
         <li><b>全球 AIGC 内容治理</b>：虚假宣传 / 反常识 / 低质引流治理，AIGC 用户端提示展示等需求</li>
       </ul>
@@ -501,7 +524,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
 
 
 <section id="origin">
-  <div class="sec-no rv">10 / ACADEMIC ROOTS</div>
+  <div class="sec-no rv">11 / ACADEMIC ROOTS</div>
   <h2 class="sec rv">学科背景：城市规划 × 数据科学</h2>
   <p class="sec-sub rv">城乡规划给我的不是画图技能，而是一套思维模型：在复杂系统里找结构。</p>
   <p class="rv">城市是极其复杂的系统——有限的资源要平衡多方利益。规划教育训练我的第一反应从来不是直接给方案，而是<b>先做现状分析、拆解要素、找到关键约束</b>。转到产品领域后我发现这个模型完全相通：面对复杂业务场景，先拆清楚用户是谁、场景链路有哪些、核心矛盾在哪里。<b>这是 EchoWalk 空间指标转译、CiteWise 科研全流程拆解共同的思维底座。</b></p>
@@ -523,7 +546,7 @@ nav.side{padding-top:30px;padding-bottom:20px;overflow-y:auto}.navlist{margin-to
 
 
 <section id="about">
-  <div class="sec-no rv">11 / ABOUT ME</div>
+  <div class="sec-no rv">12 / ABOUT ME</div>
   <h2 class="sec rv">关于我</h2>
   <div class="pull rv">"我擅于在复杂系统里找到结构，然后用工具和方法把人和信息组织起来，高效地推动事情发生。"</div>
   <div class="matrix" style="grid-template-columns:repeat(3,1fr)">
